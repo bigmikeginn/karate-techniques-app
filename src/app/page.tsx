@@ -142,7 +142,7 @@ export default function Home() {
     <div className="flex h-dvh min-h-screen flex-col overflow-hidden bg-black text-white">
       {/* Header - Jitsu-Do Style */}
       <header className="bg-[#111111] border-b border-white/10 sticky top-0 z-20">
-        <div className="px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 grid grid-cols-1 gap-2.5 sm:gap-3 lg:grid-cols-[minmax(280px,1fr)_auto_minmax(280px,1fr)] lg:items-center">
+        <div className="px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 grid grid-cols-1 gap-2.5 sm:gap-3 lg:grid-cols-[minmax(340px,1fr)_minmax(260px,360px)_minmax(340px,1fr)] lg:items-center">
           <div className="flex items-center gap-2.5 sm:gap-4 w-full min-w-0">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -173,11 +173,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden lg:flex justify-center">
+          <div className="hidden lg:flex justify-center lg:self-center">
             <DisciplineToggle activeDiscipline={activeDiscipline} onChange={switchDiscipline} />
           </div>
 
-          <div className="w-full lg:max-w-xl lg:justify-self-end">
+          <div className="w-full lg:max-w-xl lg:justify-self-end lg:self-center">
             <div className="mb-3 lg:hidden">
               <DisciplineToggle activeDiscipline={activeDiscipline} compact onChange={switchDiscipline} />
             </div>
@@ -188,9 +188,6 @@ export default function Home() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2.5 sm:py-2 text-sm bg-black border border-white/20 rounded focus:ring-1 focus:ring-red-600 focus:border-red-600 text-white placeholder-white/40"
             />
-            <p className="text-xs text-white/55 mt-1 tracking-wide">
-              {filteredTechniques.length} techniques shown
-            </p>
           </div>
         </div>
       </header>
