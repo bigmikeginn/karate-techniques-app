@@ -15,30 +15,37 @@ type DisplayTechnique = Technique & {
 };
 
 const disciplineIds = Object.keys(disciplines) as Discipline[];
+const availableTechniqueIcons = new Set([
+  'hanten',
+  'kosa-dachi',
+  'musubi-dachi',
+  'sasoi-kamae',
+  'seisan-dachi',
+  'seiza',
+  'shiko-ashi-dachi',
+  'soto-kaiten-dachi',
+  'suri-ashi',
+  'uchi-hachiji-dachi',
+]);
 
 function TechniqueIcon({
   technique,
 }: {
   technique: DisplayTechnique;
 }) {
+  if (!availableTechniqueIcons.has(technique.slug)) return null;
+
   const exactIconPath = `/images/techniques/${technique.slug}.svg`;
-  const categoryIconPath = `/images/technique-icons/karate/${technique.categorySlug}.svg`;
-  const [iconSrc, setIconSrc] = useState(exactIconPath);
 
   return (
-    <div className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded bg-white shadow-sm ring-1 ring-white/20">
+    <div className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center">
       <Image
-        src={iconSrc}
+        src={exactIconPath}
         alt=""
         width={32}
         height={32}
         unoptimized
-        className="h-7 w-7 object-contain p-0.5"
-        onError={() => {
-          if (iconSrc !== categoryIconPath) {
-            setIconSrc(categoryIconPath);
-          }
-        }}
+        className="h-7 w-7 object-contain opacity-80 invert transition-opacity duration-200 group-hover:opacity-100"
       />
     </div>
   );
