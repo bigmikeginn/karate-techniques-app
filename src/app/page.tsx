@@ -357,27 +357,33 @@ export default function Home() {
       {selectedTechnique && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-3 sm:p-6" onClick={() => setSelectedTechnique(null)}>
           <div className="bg-[#111111] rounded-lg border border-white/20 max-w-3xl w-full max-h-[90vh] overflow-auto" onClick={(e) => e.stopPropagation()}>
-            <div className="sticky top-0 bg-[#111111] border-b border-white/10 p-4 sm:p-6 flex items-center justify-between">
-              <div>
+            <div className="sticky top-0 bg-[#111111] border-b border-white/10 p-4 sm:p-6 flex items-start justify-between gap-4">
+              <div className="min-w-0">
                 <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-2">Technique Details</p>
                 <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
                   {selectedTechnique.name}
                 </h2>
               </div>
-              <button
-                onClick={() => setSelectedTechnique(null)}
-                className="text-white/55 hover:text-white border border-white/20 hover:border-white/60 w-10 h-10 flex items-center justify-center rounded transition-colors"
-              >
-                <span className="text-2xl leading-none">×</span>
-              </button>
+              <div className="flex shrink-0 items-start gap-2">
+                <span className={`max-w-36 truncate px-2 py-1 rounded text-[10px] font-mono tracking-wider uppercase ${getCategoryColor(selectedTechnique.categorySlug).bg} ${getCategoryColor(selectedTechnique.categorySlug).text} border ${getCategoryColor(selectedTechnique.categorySlug).border}`}>
+                  {selectedTechnique.category}
+                </span>
+                <button
+                  onClick={() => setSelectedTechnique(null)}
+                  className="text-white/55 hover:text-white border border-white/20 hover:border-white/60 w-10 h-10 flex items-center justify-center rounded transition-colors"
+                >
+                  <span className="text-2xl leading-none">×</span>
+                </button>
+              </div>
             </div>
             
             <div className="p-4 sm:p-6 space-y-6">
-              {/* Category Badge */}
+              {/* Description */}
               <div>
-                <span className={`inline-block px-3 py-1.5 rounded text-sm font-mono tracking-wider uppercase ${getCategoryColor(selectedTechnique.categorySlug).bg} ${getCategoryColor(selectedTechnique.categorySlug).text} border ${getCategoryColor(selectedTechnique.categorySlug).border}`}>
-                  {selectedTechnique.category}
-                </span>
+                <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-3">Description</p>
+                <p className="text-white/70 leading-relaxed">
+                  {selectedTechnique.description}
+                </p>
               </div>
 
               {/* Image placeholder */}
@@ -391,14 +397,6 @@ export default function Home() {
                     /public/images/techniques/{selectedTechnique.slug}.jpg
                   </p>
                 </div>
-              </div>
-
-              {/* Description */}
-              <div>
-                <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-3">Description</p>
-                <p className="text-white/70 leading-relaxed">
-                  {selectedTechnique.description}
-                </p>
               </div>
 
               {/* Videos section */}
