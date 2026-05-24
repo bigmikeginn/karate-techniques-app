@@ -39,6 +39,22 @@ function getKarateSubtitle(technique: DisplayTechnique) {
   return categorySubtitles[technique.categorySlug] || 'Karate Technique';
 }
 
+function getBjjSubtitle(technique: DisplayTechnique) {
+  const categorySubtitles: Record<string, string> = {
+    'bjj-positions': 'Position',
+    'bjj-movement-fundamentals': 'Movement',
+    'bjj-escapes': 'Escape',
+    'bjj-guards': 'Guard',
+    'bjj-sweeps': 'Sweep',
+    'bjj-guard-passing': 'Pass',
+    'bjj-submissions': 'Submission',
+    'bjj-takedowns': 'Takedown',
+    'bjj-transitions-control': 'Transition / Control',
+  };
+
+  return categorySubtitles[technique.categorySlug] || 'BJJ Technique';
+}
+
 function DisciplineToggle({
   activeDiscipline,
   compact = false,
@@ -294,7 +310,7 @@ export default function Home() {
                 const colors = getCategoryColor(technique.categorySlug);
                 const subtitle = activeDiscipline === 'karate'
                   ? getKarateSubtitle(technique)
-                  : null;
+                  : getBjjSubtitle(technique);
                 return (
                   <div
                     key={technique.uniqueKey}
