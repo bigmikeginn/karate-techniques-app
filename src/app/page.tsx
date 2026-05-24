@@ -15,6 +15,13 @@ type DisplayTechnique = Technique & {
 
 const disciplineIds = Object.keys(disciplines) as Discipline[];
 
+function getTechniqueTier(technique: Technique) {
+  if (technique.primary) return 'Primary';
+  if (technique.secondary) return 'Secondary';
+  if (technique.tertiary) return 'Tertiary';
+  return null;
+}
+
 function DisciplineToggle({
   activeDiscipline,
   compact = false,
@@ -91,8 +98,7 @@ export default function Home() {
       .filter(tech => 
         tech.name.toLowerCase().includes(searchTerm.toLowerCase())
       )
-      // Only show primary techniques
-      .filter(tech => tech.primary)
+      .filter(tech => tech.primary || tech.secondary || tech.tertiary)
       .map(tech => ({ 
         ...tech, 
         category: cat.name,
@@ -256,6 +262,8 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3">
               {filteredTechniques.map((technique) => {
                 const colors = getCategoryColor(technique.categorySlug);
+                const techniqueTier = getTechniqueTier(technique);
+                const showTierBadge = activeDiscipline === 'karate' && techniqueTier && techniqueTier !== 'Primary';
                 return (
                   <div
                     key={technique.uniqueKey}
@@ -282,6 +290,11 @@ export default function Home() {
                           <div className="h-4"></div>
                         )}
                       </div>
+                      {showTierBadge && (
+                        <span className={`inline-block rounded border px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider ${colors.border} ${colors.text}`}>
+                          {techniqueTier}
+                        </span>
+                      )}
                       
                       <p className="text-xs text-white/40 leading-tight line-clamp-2">
                         {technique.description}
@@ -337,6 +350,11 @@ export default function Home() {
                 <span className={`inline-block px-3 py-1.5 rounded text-sm font-mono tracking-wider uppercase ${getCategoryColor(selectedTechnique.categorySlug).bg} ${getCategoryColor(selectedTechnique.categorySlug).text} border ${getCategoryColor(selectedTechnique.categorySlug).border}`}>
                   {selectedTechnique.category}
                 </span>
+                {activeDiscipline === 'karate' && getTechniqueTier(selectedTechnique) && (
+                  <span className="ml-2 inline-block px-3 py-1.5 rounded text-sm font-mono tracking-wider uppercase bg-white/5 text-white/60 border border-white/20">
+                    {getTechniqueTier(selectedTechnique)}
+                  </span>
+                )}
               </div>
 
               {/* Image placeholder */}
