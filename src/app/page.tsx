@@ -135,6 +135,7 @@ export default function Home() {
         description: getDescription(tech.name)
       }))
     );
+  const selectedCategoryKey = Array.from(selectedCategories).sort().join('|') || 'all';
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -233,24 +234,33 @@ export default function Home() {
               {categories.map((category) => {
                 const isSelected = selectedCategories.has(category.slug);
                 const colors = getCategoryColor(category.slug);
+                const techniqueCount = category.techniques.filter(tech => tech.primary || tech.secondary || tech.tertiary).length;
                 
                 return (
                   <label key={category.slug} className={`
-                    flex items-center space-x-3 py-2 px-2 rounded cursor-pointer
-                    border border-transparent hover:border-white/10
-                    ${isSelected ? 'bg-white/5 border-white/20' : ''}
+                    flex items-center space-x-3 py-2.5 px-2 rounded cursor-pointer
+                    border transition-all duration-300 ease-out
+                    hover:translate-x-1 hover:border-white/15 hover:bg-white/[0.03]
+                    ${isSelected ? `category-selected bg-white/[0.07] border-white/20 ${colors.text}` : 'border-transparent'}
                   `}>
                     <input
                       type="checkbox"
                       checked={isSelected}
                       onChange={() => toggleCategory(category.slug)}
-                      className="w-4 h-4 text-red-600 border-white/30 rounded bg-black/50"
+                      className="w-4 h-4 accent-red-600 border-white/30 rounded bg-black/50"
                     />
                     <div className="flex-1 min-w-0">
                       <span className={`font-medium block ${isSelected ? colors.text : 'text-white/70'}`}>
                         {category.name}
                       </span>
                     </div>
+                    <span className={`rounded border px-1.5 py-0.5 text-[10px] font-mono leading-none transition-colors ${
+                      isSelected
+                        ? `${colors.border} ${colors.text} bg-white/5`
+                        : 'border-white/10 text-white/35'
+                    }`}>
+                      {techniqueCount}
+                    </span>
                   </label>
                 );
               })}
@@ -287,8 +297,11 @@ export default function Home() {
         {/* Main Content - Jitsu-Do Style */}
         <main className="flex-1 overflow-auto p-3 sm:p-6">
           {filteredTechniques.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3">
-              {filteredTechniques.map((technique) => {
+            <div
+              key={`${activeDiscipline}-${selectedCategoryKey}`}
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3"
+            >
+              {filteredTechniques.map((technique, index) => {
                 const colors = getCategoryColor(technique.categorySlug);
                 const techniqueTier = getTechniqueTier(technique);
                 const markerTier = activeDiscipline === 'karate' && techniqueTier !== 'Primary'
@@ -301,10 +314,12 @@ export default function Home() {
                     className={`
                       bg-[#111111] rounded border-2 
                       ${colors.border} ${colors.hover}
-                      relative transition-all duration-200 p-3 
+                      premium-card animate-soft-enter relative transition-all duration-300 ease-out p-3 
                       cursor-pointer group
-                      hover:shadow-lg hover:shadow-red-900/20
+                      hover:-translate-y-1 hover:scale-[1.015] hover:shadow-xl hover:shadow-red-950/25
+                      active:translate-y-0 active:scale-[0.99]
                     `}
+                    style={{ animationDelay: `${Math.min(index, 20) * 18}ms` }}
                   >
                     {(markerTier === 'Secondary' || markerTier === 'Tertiary') && (
                       <TechniqueTierMarker tier={markerTier} colorClass={colors.text} />
@@ -355,8 +370,8 @@ export default function Home() {
 
       {/* Modal for Technique Details - Jitsu-Do Style */}
       {selectedTechnique && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-3 sm:p-6" onClick={() => setSelectedTechnique(null)}>
-          <div className="bg-[#111111] rounded-lg border border-white/20 max-w-3xl w-full max-h-[90vh] overflow-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="animate-modal-overlay fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-3 sm:p-6" onClick={() => setSelectedTechnique(null)}>
+          <div className="animate-modal-panel bg-[#111111] rounded-lg border border-white/20 max-w-3xl w-full max-h-[90vh] overflow-auto shadow-2xl shadow-black/60" onClick={(e) => e.stopPropagation()}>
             <div className="sticky top-0 bg-[#111111] border-b border-white/10 p-4 sm:p-6">
               <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-2">Technique Details</p>
               <div className="flex items-center justify-between gap-4">
