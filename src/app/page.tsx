@@ -199,11 +199,11 @@ export default function Home() {
           transition-transform duration-300 ease-in-out
           h-full
         `}>
-          <div className="p-4">
-            <div className="mb-5 lg:hidden">
+          <div className="p-3 sm:p-4">
+            <div className="mb-4 lg:hidden">
               <DisciplineToggle activeDiscipline={activeDiscipline} compact onChange={switchDiscipline} />
             </div>
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center justify-between mb-4">
               <p className="text-xs tracking-[0.25em] uppercase text-white/50">Categories</p>
               <div className="flex gap-1">
                 <button
@@ -227,7 +227,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="space-y-1 text-sm">
+            <div className="space-y-0.5 text-[13px]">
               {categories.map((category) => {
                 const isSelected = selectedCategories.has(category.slug);
                 const colors = getCategoryColor(category.slug);
@@ -235,7 +235,7 @@ export default function Home() {
                 
                 return (
                   <label key={category.slug} className={`
-                    flex items-center space-x-3 py-2.5 px-2 rounded cursor-pointer
+                    flex items-center space-x-2.5 py-1.5 px-2 rounded cursor-pointer
                     border transition-all duration-300 ease-out
                     hover:translate-x-1 hover:border-white/15 hover:bg-white/[0.03]
                     ${isSelected ? `category-selected bg-white/[0.07] border-white/20 ${colors.text}` : 'border-transparent'}
@@ -244,7 +244,7 @@ export default function Home() {
                       type="checkbox"
                       checked={isSelected}
                       onChange={() => toggleCategory(category.slug)}
-                      className="w-4 h-4 accent-red-600 border-white/30 rounded bg-black/50"
+                      className="h-3.5 w-3.5 accent-red-600 border-white/30 rounded bg-black/50"
                     />
                     <div className="flex-1 min-w-0">
                       <span className={`font-medium block ${isSelected ? colors.text : 'text-white/70'}`}>
@@ -264,16 +264,16 @@ export default function Home() {
             </div>
 
             {/* Stats */}
-            <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="mt-4 pt-3 border-t border-white/10">
               <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="text-center p-3 bg-white/5 rounded border border-white/10">
-                  <div className="text-2xl font-semibold text-white mb-1">
+                <div className="text-center p-2.5 bg-white/5 rounded border border-white/10">
+                  <div className="text-xl font-semibold text-white mb-1">
                     {selectedCategories.size}
                   </div>
                   <div className="text-white/50 tracking-wider uppercase">Selected</div>
                 </div>
-                <div className="text-center p-3 bg-white/5 rounded border border-white/10">
-                  <div className="text-2xl font-semibold text-white mb-1">
+                <div className="text-center p-2.5 bg-white/5 rounded border border-white/10">
+                  <div className="text-xl font-semibold text-white mb-1">
                     {filteredTechniques.length}
                   </div>
                   <div className="text-white/50 tracking-wider uppercase">Showing</div>
