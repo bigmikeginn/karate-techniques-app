@@ -22,6 +22,34 @@ function getTechniqueTier(technique: Technique) {
   return null;
 }
 
+function TechniqueTierMarker({
+  tier,
+  colorClass,
+}: {
+  tier: 'Secondary' | 'Tertiary';
+  colorClass: string;
+}) {
+  if (tier === 'Tertiary') {
+    return (
+      <span
+        className={`absolute right-2 top-1.5 text-sm leading-none ${colorClass}`}
+        title="Tertiary technique"
+        aria-label="Tertiary technique"
+      >
+        *
+      </span>
+    );
+  }
+
+  return (
+    <span
+      className={`absolute right-2.5 top-2.5 h-2 w-2 rounded-full bg-current ${colorClass}`}
+      title="Secondary technique"
+      aria-label="Secondary technique"
+    />
+  );
+}
+
 function DisciplineToggle({
   activeDiscipline,
   compact = false,
@@ -263,7 +291,9 @@ export default function Home() {
               {filteredTechniques.map((technique) => {
                 const colors = getCategoryColor(technique.categorySlug);
                 const techniqueTier = getTechniqueTier(technique);
-                const showTierBadge = activeDiscipline === 'karate' && techniqueTier && techniqueTier !== 'Primary';
+                const markerTier = activeDiscipline === 'karate' && techniqueTier !== 'Primary'
+                  ? techniqueTier
+                  : null;
                 return (
                   <div
                     key={technique.uniqueKey}
@@ -271,14 +301,17 @@ export default function Home() {
                     className={`
                       bg-[#111111] rounded border-2 
                       ${colors.border} ${colors.hover}
-                      transition-all duration-200 p-3 
+                      relative transition-all duration-200 p-3 
                       cursor-pointer group
                       hover:shadow-lg hover:shadow-red-900/20
                     `}
                   >
+                    {(markerTier === 'Secondary' || markerTier === 'Tertiary') && (
+                      <TechniqueTierMarker tier={markerTier} colorClass={colors.text} />
+                    )}
                     <div className="space-y-1.5">
                       <div>
-                        <h3 className="font-semibold text-sm text-white leading-tight">
+                        <h3 className="pr-4 font-semibold text-sm text-white leading-tight">
                           {technique.name}
                         </h3>
                         {activeDiscipline === 'karate' && isJapaneseName(technique.name) && (
@@ -290,11 +323,6 @@ export default function Home() {
                           <div className="h-4"></div>
                         )}
                       </div>
-                      {showTierBadge && (
-                        <span className={`inline-block rounded border px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider ${colors.border} ${colors.text}`}>
-                          {techniqueTier}
-                        </span>
-                      )}
                       
                       <p className="text-xs text-white/40 leading-tight line-clamp-2">
                         {technique.description}
@@ -350,11 +378,6 @@ export default function Home() {
                 <span className={`inline-block px-3 py-1.5 rounded text-sm font-mono tracking-wider uppercase ${getCategoryColor(selectedTechnique.categorySlug).bg} ${getCategoryColor(selectedTechnique.categorySlug).text} border ${getCategoryColor(selectedTechnique.categorySlug).border}`}>
                   {selectedTechnique.category}
                 </span>
-                {activeDiscipline === 'karate' && getTechniqueTier(selectedTechnique) && (
-                  <span className="ml-2 inline-block px-3 py-1.5 rounded text-sm font-mono tracking-wider uppercase bg-white/5 text-white/60 border border-white/20">
-                    {getTechniqueTier(selectedTechnique)}
-                  </span>
-                )}
               </div>
 
               {/* Image placeholder */}
