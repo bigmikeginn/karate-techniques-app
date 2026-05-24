@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Karate Techniques Library",
-  description: "Comprehensive library of karate techniques, stances, blocks, strikes, and katas for martial arts practitioners",
+  title: "Martial Arts Techniques Library",
+  description: "A student resource for Karate and Brazilian Jiu-Jitsu techniques.",
 };
 
 export default function RootLayout({

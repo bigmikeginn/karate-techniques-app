@@ -1,11 +1,12 @@
-# 🥋 Karate Techniques App
+# Karate & BJJ Techniques App
 
-A modern, lightweight web application for exploring and learning karate techniques. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, lightweight web application for exploring Karate and Brazilian Jiu-Jitsu techniques. Built with Next.js, TypeScript, and Tailwind CSS as a student resource for the Jitsu-Do club.
 
 ## ✨ Features
 
-- **14 Categories** of karate techniques (Stances, Blocks, Punches, Kicks, etc.)
-- **265+ Techniques** with detailed organization
+- **Separate Karate and BJJ libraries** selected by a top-level toggle
+- **14 Karate categories** sourced from the existing CSV workflow
+- **9 BJJ categories** focused on widespread fundamentals and common classroom/competition techniques
 - **Modern UI** with dark/light theme support
 - **Fast Loading** optimized for performance
 - **Responsive Design** works on all devices
@@ -27,7 +28,9 @@ src/
 │   ├── layout.tsx           # Root layout
 │   └── page.tsx             # Home page
 ├── data/
-│   └── techniques.json      # All technique data
+│   ├── techniques.json      # Karate technique data
+│   ├── bjj-techniques.json  # BJJ technique data
+│   └── disciplines.ts       # Karate/BJJ registry
 ├── types/
 │   └── technique.ts         # TypeScript definitions
 └── lib/
@@ -39,16 +42,20 @@ src/
 ✅ **Phase 1 Complete** - Basic Framework
 - Project structure set up
 - CSV data converted to JSON
-- Home page with category grid
+- Home page with shared Karate/BJJ browsing UI
 - Dynamic category pages
 - Dynamic technique detail pages
 - Responsive design
 - Performance optimized
 
+✅ **Phase 2 Started** - Karate/BJJ split
+- Karate and BJJ are separate libraries
+- Discipline toggle added to the main screen
+- BJJ starter library added with mainstream categories and techniques
+
 📋 **Next Steps**
-- [ ] Add search functionality
 - [ ] Implement image/video uploads
-- [ ] Add technique descriptions
+- [ ] Expand technique descriptions
 - [ ] User authentication
 - [ ] Favorites/bookmarks
 - [ ] Progress tracking
@@ -71,14 +78,17 @@ src/
 
 ## 📊 Data Source
 
-Technique data is sourced from `Secret Project - Sheet1.csv` with:
+Karate technique data is sourced from `Secret Project - Sheet1.csv` with:
 - 14 categories
 - 265+ techniques
 - Primary/Secondary/Tertiary classification
 
+BJJ starter data lives in `src/data/bjj-techniques.json`. It uses the same category and technique shape as Karate, so both sections operate through the same layout, search, category filters, cards, and detail modal.
+
 ## 🎨 Customization
 
-- Update `src/data/techniques.json` to modify technique data
+- Update `src/data/techniques.json` to modify Karate data
+- Update `src/data/bjj-techniques.json` to modify BJJ data
 - Add images to `public/images/` directory
 - Customize styles in Tailwind configuration
 - Modify components in `src/app/`
@@ -99,4 +109,4 @@ node scripts/convert-csv-to-json.js
 
 ---
 
-Built with ❤️ for karate practitioners and martial arts enthusiasts.
+Built for Karate and BJJ students.

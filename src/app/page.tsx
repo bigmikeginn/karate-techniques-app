@@ -1,18 +1,70 @@
 'use client';
 
 import { useState } from 'react';
-import { Category, Technique } from '@/types/technique';
-import techniquesData from '@/data/techniques.json';
+import { Category, Discipline, Technique } from '@/types/technique';
+import { disciplines } from '@/data/disciplines';
 import { getDescription } from '@/data/technique_descriptions';
 import { getCategoryColor } from '@/lib/categoryColors';
 import { getEnglishName, isJapaneseName } from '@/data/technique_translations';
 
+type DisplayTechnique = Technique & {
+  category: string;
+  categorySlug: string;
+  uniqueKey: string;
+};
+
+const disciplineIds = Object.keys(disciplines) as Discipline[];
+
+function DisciplineToggle({
+  activeDiscipline,
+  compact = false,
+  onChange,
+}: {
+  activeDiscipline: Discipline;
+  compact?: boolean;
+  onChange: (discipline: Discipline) => void;
+}) {
+  return (
+    <div className={`inline-grid grid-cols-2 rounded border border-white/20 bg-black p-1 ${compact ? 'w-full' : 'min-w-52'}`}>
+      {disciplineIds.map((id) => {
+        const isActive = activeDiscipline === id;
+        return (
+          <button
+            key={id}
+            type="button"
+            onClick={() => onChange(id)}
+            className={`rounded-sm px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-colors ${
+              isActive
+                ? 'bg-red-600 text-white'
+                : 'text-white/55 hover:bg-white/5 hover:text-white'
+            }`}
+            aria-pressed={isActive}
+          >
+            {disciplines[id].shortLabel}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function Home() {
-  const categories: Category[] = techniquesData;
+  const [activeDiscipline, setActiveDiscipline] = useState<Discipline>('karate');
   const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set());
   const [searchTerm, setSearchTerm] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [selectedTechnique, setSelectedTechnique] = useState<any | null>(null);
+  const [selectedTechnique, setSelectedTechnique] = useState<DisplayTechnique | null>(null);
+  const discipline = disciplines[activeDiscipline];
+  const categories: Category[] = discipline.categories;
+
+  const switchDiscipline = (nextDiscipline: Discipline) => {
+    if (nextDiscipline === activeDiscipline) return;
+    setActiveDiscipline(nextDiscipline);
+    setSelectedCategories(new Set());
+    setSearchTerm('');
+    setSelectedTechnique(null);
+    setSidebarOpen(false);
+  };
 
   const toggleCategory = (slug: string) => {
     const newSelected = new Set(selectedCategories);
@@ -50,25 +102,16 @@ export default function Home() {
       }))
     );
 
-  const totalPrimaryTechniques = categories
-    .flatMap(cat => cat.techniques)
-    .filter(tech => tech.primary)
-    .length;
-
-  const selectedPrimaryCount = categories
-    .filter(cat => selectedCategories.has(cat.slug))
-    .flatMap(cat => cat.techniques.filter(tech => tech.primary))
-    .length;
-
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header - Jitsu-Do Style */}
       <header className="bg-[#111111] border-b border-white/10 sticky top-0 z-20">
-        <div className="px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto">
+        <div className="px-4 sm:px-6 lg:px-8 py-3 grid grid-cols-1 gap-3 lg:grid-cols-[minmax(280px,1fr)_auto_minmax(280px,1fr)] lg:items-center">
+          <div className="flex items-center gap-3 sm:gap-4 w-full min-w-0">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="lg:hidden p-2 text-white/55 hover:text-white border border-white/20 hover:border-white/60 transition-colors rounded"
+              aria-label="Open categories"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -77,24 +120,31 @@ export default function Home() {
             <div className="bg-[#111111] rounded px-2 py-1">
               <img 
                 src="/karate-logo.png?v=1" 
-                alt="Jitsu-Do Karate" 
+                alt={discipline.logoAlt}
                 className="h-10 sm:h-12 w-auto"
               />
             </div>
-            <div className="flex-1 sm:flex-none">
+            <div className="flex-1 min-w-0">
               <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-                Jitsu-Do Karate
+                {discipline.title}
               </h1>
               <p className="text-xs tracking-[0.25em] uppercase text-white/40">
-                Techniques Library
+                {discipline.label} Techniques Library
               </p>
             </div>
           </div>
 
-          <div className="flex-1 w-full sm:max-w-md">
+          <div className="hidden lg:flex justify-center">
+            <DisciplineToggle activeDiscipline={activeDiscipline} onChange={switchDiscipline} />
+          </div>
+
+          <div className="w-full lg:max-w-xl lg:justify-self-end">
+            <div className="mb-3 lg:hidden">
+              <DisciplineToggle activeDiscipline={activeDiscipline} compact onChange={switchDiscipline} />
+            </div>
             <input
               type="text"
-              placeholder="Search techniques..."
+              placeholder={`Search ${discipline.label} techniques...`}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2 text-sm bg-black border border-white/20 rounded focus:ring-1 focus:ring-red-600 focus:border-red-600 text-white placeholder-white/40"
@@ -118,6 +168,9 @@ export default function Home() {
           h-full
         `}>
           <div className="p-4">
+            <div className="mb-5 lg:hidden">
+              <DisciplineToggle activeDiscipline={activeDiscipline} compact onChange={switchDiscipline} />
+            </div>
             <div className="flex items-center justify-between mb-6">
               <p className="text-xs tracking-[0.25em] uppercase text-white/50">Categories</p>
               <div className="flex gap-1">
@@ -144,7 +197,6 @@ export default function Home() {
 
             <div className="space-y-1 text-sm">
               {categories.map((category) => {
-                const primaryCount = category.techniques.filter(tech => tech.primary).length;
                 const isSelected = selectedCategories.has(category.slug);
                 const colors = getCategoryColor(category.slug);
                 
@@ -221,12 +273,12 @@ export default function Home() {
                         <h3 className="font-semibold text-sm text-white leading-tight">
                           {technique.name}
                         </h3>
-                        {isJapaneseName(technique.name) && (
+                        {activeDiscipline === 'karate' && isJapaneseName(technique.name) && (
                           <p className={`text-xs mt-0.5 leading-tight italic ${colors.text}`}>
                             {getEnglishName(technique.name) || ''}
                           </p>
                         )}
-                        {!isJapaneseName(technique.name) && (
+                        {(activeDiscipline !== 'karate' || !isJapaneseName(technique.name)) && (
                           <div className="h-4"></div>
                         )}
                       </div>
@@ -244,13 +296,13 @@ export default function Home() {
               <div className="text-center max-w-md">
                 <div className="text-white/70 text-lg mb-3">
                   {selectedCategories.size === 0
-                    ? '👈 Select categories to get started'
-                    : '🔍 No techniques found'
+                    ? 'Select categories to get started'
+                    : 'No techniques found'
                   }
                 </div>
                 <p className="text-sm text-white/50 leading-relaxed">
                   {selectedCategories.size === 0
-                    ? 'Choose categories from the sidebar or use "Select All" to see all techniques.'
+                    ? `Choose ${discipline.label} categories from the sidebar or use "Select All" to see all techniques.`
                     : 'Try selecting different categories or adjusting your search term.'
                   }
                 </p>

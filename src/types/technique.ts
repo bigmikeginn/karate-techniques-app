@@ -1,3 +1,5 @@
+export type Discipline = 'karate' | 'bjj';
+
 export interface Technique {
   name: string;
   slug: string;

@@ -1,0 +1,125 @@
+[
+  {
+    "name": "Positions",
+    "slug": "bjj-positions",
+    "techniques": [
+      { "name": "Closed Guard", "slug": "closed-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Open Guard", "slug": "open-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Half Guard", "slug": "half-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Side Control", "slug": "side-control", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Mount", "slug": "mount", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Back Control", "slug": "back-control", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Turtle", "slug": "turtle", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "North-South", "slug": "north-south", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Knee on Belly", "slug": "knee-on-belly", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  },
+  {
+    "name": "Movement & Fundamentals",
+    "slug": "bjj-movement-fundamentals",
+    "techniques": [
+      { "name": "Shrimp Escape", "slug": "shrimp-escape", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Bridge", "slug": "bridge", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Technical Stand-Up", "slug": "technical-stand-up", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Forward Roll", "slug": "forward-roll", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Backward Roll", "slug": "backward-roll", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Hip Switch", "slug": "hip-switch", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Frame and Recover", "slug": "frame-and-recover", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Pummeling", "slug": "pummeling", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  },
+  {
+    "name": "Escapes",
+    "slug": "bjj-escapes",
+    "techniques": [
+      { "name": "Bridge and Roll Escape", "slug": "bridge-and-roll-escape", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Elbow Knee Escape", "slug": "elbow-knee-escape", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Side Control Frame Escape", "slug": "side-control-frame-escape", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Back Escape", "slug": "back-escape", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Knee on Belly Escape", "slug": "knee-on-belly-escape", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Turtle Escape", "slug": "turtle-escape", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Headlock Escape", "slug": "headlock-escape", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  },
+  {
+    "name": "Guards",
+    "slug": "bjj-guards",
+    "techniques": [
+      { "name": "Closed Guard", "slug": "closed-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Butterfly Guard", "slug": "butterfly-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Half Guard", "slug": "half-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "De La Riva Guard", "slug": "de-la-riva-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Spider Guard", "slug": "spider-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Collar Sleeve Guard", "slug": "collar-sleeve-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "X Guard", "slug": "x-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Single Leg X Guard", "slug": "single-leg-x-guard", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  },
+  {
+    "name": "Sweeps",
+    "slug": "bjj-sweeps",
+    "techniques": [
+      { "name": "Scissor Sweep", "slug": "scissor-sweep", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Hip Bump Sweep", "slug": "hip-bump-sweep", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Flower Sweep", "slug": "flower-sweep", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Butterfly Sweep", "slug": "butterfly-sweep", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Old School Sweep", "slug": "old-school-sweep", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Single Leg X Sweep", "slug": "single-leg-x-sweep", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "De La Riva Sweep", "slug": "de-la-riva-sweep", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  },
+  {
+    "name": "Guard Passing",
+    "slug": "bjj-guard-passing",
+    "techniques": [
+      { "name": "Knee Slice Pass", "slug": "knee-slice-pass", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Toreando Pass", "slug": "toreando-pass", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Over Under Pass", "slug": "over-under-pass", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Double Under Pass", "slug": "double-under-pass", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Stack Pass", "slug": "stack-pass", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Leg Drag", "slug": "leg-drag", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Body Lock Pass", "slug": "body-lock-pass", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  },
+  {
+    "name": "Submissions",
+    "slug": "bjj-submissions",
+    "techniques": [
+      { "name": "Rear Naked Choke", "slug": "rear-naked-choke", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Armbar", "slug": "armbar", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Triangle Choke", "slug": "triangle-choke", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Kimura", "slug": "kimura", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Americana", "slug": "americana", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Guillotine", "slug": "guillotine", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Cross Collar Choke", "slug": "cross-collar-choke", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Omoplata", "slug": "omoplata", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Ezekiel Choke", "slug": "ezekiel-choke", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  },
+  {
+    "name": "Takedowns",
+    "slug": "bjj-takedowns",
+    "techniques": [
+      { "name": "Double Leg Takedown", "slug": "double-leg-takedown", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Single Leg Takedown", "slug": "single-leg-takedown", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Ankle Pick", "slug": "ankle-pick", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Arm Drag to Back", "slug": "arm-drag-to-back", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Body Lock Takedown", "slug": "body-lock-takedown", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Hip Throw", "slug": "hip-throw", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Guard Pull", "slug": "guard-pull", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  },
+  {
+    "name": "Transitions & Control",
+    "slug": "bjj-transitions-control",
+    "techniques": [
+      { "name": "Guard to Mount", "slug": "guard-to-mount", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Side Control to Mount", "slug": "side-control-to-mount", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Mount to Back", "slug": "mount-to-back", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Back Take", "slug": "back-take", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Knee on Belly Transition", "slug": "knee-on-belly-transition", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Turtle Breakdown", "slug": "turtle-breakdown", "primary": true, "secondary": false, "tertiary": false, "description": "" },
+      { "name": "Seatbelt Control", "slug": "seatbelt-control", "primary": true, "secondary": false, "tertiary": false, "description": "" }
+    ]
+  }
+]
