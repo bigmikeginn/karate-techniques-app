@@ -63,16 +63,6 @@ export default function TechniquePage() {
                 Primary
               </span>
             )}
-            {technique.secondary && (
-              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                Secondary
-              </span>
-            )}
-            {technique.tertiary && (
-              <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">
-                Tertiary
-              </span>
-            )}
           </div>
 
           {technique.description ? (

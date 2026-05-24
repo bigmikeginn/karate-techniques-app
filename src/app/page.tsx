@@ -16,40 +16,31 @@ type DisplayTechnique = Technique & {
 
 const disciplineIds = Object.keys(disciplines) as Discipline[];
 
-function getTechniqueTier(technique: Technique) {
-  if (technique.primary) return 'Primary';
-  if (technique.secondary) return 'Secondary';
-  if (technique.tertiary) return 'Tertiary';
-  return null;
-}
-
-function TechniqueTierMarker({
-  tier,
-  colorClass,
+function TechniqueIcon({
+  technique,
 }: {
-  tier: 'Secondary' | 'Tertiary';
-  colorClass: string;
+  technique: DisplayTechnique;
 }) {
-  if (tier === 'Tertiary') {
-    return (
-      <span
-        className={`absolute right-2 top-1.5 text-sm leading-none ${colorClass}`}
-        title="Tertiary technique"
-        role="img"
-        aria-label="Tertiary technique"
-      >
-        *
-      </span>
-    );
-  }
+  const exactIconPath = `/images/techniques/${technique.slug}.svg`;
+  const categoryIconPath = `/images/technique-icons/karate/${technique.categorySlug}.svg`;
+  const [iconSrc, setIconSrc] = useState(exactIconPath);
 
   return (
-    <span
-      className={`absolute right-2.5 top-2.5 h-2 w-2 rounded-full bg-current ${colorClass}`}
-      title="Secondary technique"
-      role="img"
-      aria-label="Secondary technique"
-    />
+    <div className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded bg-white shadow-sm ring-1 ring-white/20">
+      <Image
+        src={iconSrc}
+        alt=""
+        width={32}
+        height={32}
+        unoptimized
+        className="h-7 w-7 object-contain p-0.5"
+        onError={() => {
+          if (iconSrc !== categoryIconPath) {
+            setIconSrc(categoryIconPath);
+          }
+        }}
+      />
+    </div>
   );
 }
 
@@ -309,10 +300,6 @@ export default function Home() {
             >
               {filteredTechniques.map((technique, index) => {
                 const colors = getCategoryColor(technique.categorySlug);
-                const techniqueTier = getTechniqueTier(technique);
-                const markerTier = activeDiscipline === 'karate' && techniqueTier !== 'Primary'
-                  ? techniqueTier
-                  : null;
                 return (
                   <div
                     key={technique.uniqueKey}
@@ -327,16 +314,16 @@ export default function Home() {
                     `}
                     style={{ animationDelay: `${Math.min(index, 20) * 18}ms` }}
                   >
-                    {(markerTier === 'Secondary' || markerTier === 'Tertiary') && (
-                      <TechniqueTierMarker tier={markerTier} colorClass={colors.text} />
+                    {activeDiscipline === 'karate' && (
+                      <TechniqueIcon technique={technique} />
                     )}
                     <div className="space-y-1.5">
                       <div>
-                        <h2 className="pr-4 font-semibold text-sm text-white leading-tight">
+                        <h2 className="pr-11 font-semibold text-sm text-white leading-tight">
                           {technique.name}
                         </h2>
                         {activeDiscipline === 'karate' && isJapaneseName(technique.name) && (
-                          <p className={`text-xs mt-0.5 leading-tight italic ${colors.text}`}>
+                          <p className={`pr-9 text-xs mt-0.5 leading-tight italic ${colors.text}`}>
                             {getEnglishName(technique.name) || ''}
                           </p>
                         )}
