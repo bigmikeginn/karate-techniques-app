@@ -1,0 +1,2206 @@
+[
+  {
+    "name": "Stances (Dachi)",
+    "slug": "stances-dachi",
+    "techniques": [
+      {
+        "name": "Musubi-dachi",
+        "slug": "musubi-dachi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Seisan-dachi",
+        "slug": "seisan-dachi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Soto-hachiji-dachi",
+        "slug": "soto-hachiji-dachi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shiko-ashi-dachi",
+        "slug": "shiko-ashi-dachi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Uchi-hachiji-dachi",
+        "slug": "uchi-hachiji-dachi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Seiza",
+        "slug": "seiza",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sagi-ashi-dachi",
+        "slug": "sagi-ashi-dachi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kosa-dachi",
+        "slug": "kosa-dachi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Soto-kaiten-dachi",
+        "slug": "soto-kaiten-dachi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kaishi",
+        "slug": "kaishi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Suri-ashi",
+        "slug": "suri-ashi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Neko-ashi-dachi",
+        "slug": "neko-ashi-dachi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sanchin-dachi",
+        "slug": "sanchin-dachi",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Hiza-tate-ashi-dachi",
+        "slug": "hiza-tate-ashi-dachi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kyusei-kamae",
+        "slug": "kyusei-kamae",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Rohai Kamae",
+        "slug": "rohai-kamae",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Hanten",
+        "slug": "hanten",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Rinten",
+        "slug": "rinten",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Okutsu-dachi",
+        "slug": "okutsu-dachi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sasoi-kamae",
+        "slug": "sasoi-kamae",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Yoko-hei kamae",
+        "slug": "yoko-hei-kamae",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Tsuno-kamae",
+        "slug": "tsuno-kamae",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Blocks (Uke)",
+    "slug": "blocks-uke",
+    "techniques": [
+      {
+        "name": "Shuto-uke",
+        "slug": "shuto-uke",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Gedan-barai",
+        "slug": "gedan-barai",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Uchi-uke",
+        "slug": "uchi-uke",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Jodan-uke",
+        "slug": "jodan-uke",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kote-uke",
+        "slug": "kote-uke",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hiki-otoshi-uke",
+        "slug": "hiki-otoshi-uke",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tsukami-uke",
+        "slug": "tsukami-uke",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Teisho-uke",
+        "slug": "teisho-uke",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sukui-uke",
+        "slug": "sukui-uke",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mawashi-uke",
+        "slug": "mawashi-uke",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ryote-kote-uke",
+        "slug": "ryote-kote-uke",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Ryote-mawashi-uke",
+        "slug": "ryote-mawashi-uke",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Kosa-uke",
+        "slug": "kosa-uke",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Uchi-mikazuki-geri-uke",
+        "slug": "uchi-mikazuki-geri-uke",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Sukui-uke (bassai version)",
+        "slug": "sukui-uke-bassai-version",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Haishu-uke",
+        "slug": "haishu-uke",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Morote-uke",
+        "slug": "morote-uke",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Punches (Zuki)",
+    "slug": "punches-zuki",
+    "techniques": [
+      {
+        "name": "Choku-zuki",
+        "slug": "choku-zuki",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shiko-zuki",
+        "slug": "shiko-zuki",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Oi-zuki",
+        "slug": "oi-zuki",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Gyaku-zuki",
+        "slug": "gyaku-zuki",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kizami-zuki",
+        "slug": "kizami-zuki",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kagi-zuki",
+        "slug": "kagi-zuki",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tate-zuki",
+        "slug": "tate-zuki",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ura-zuki",
+        "slug": "ura-zuki",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Kicks (Geri)",
+    "slug": "kicks-geri",
+    "techniques": [
+      {
+        "name": "Mae-geri",
+        "slug": "mae-geri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Yoko-geri",
+        "slug": "yoko-geri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mae-ashi mae-geri",
+        "slug": "mae-ashi-mae-geri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mawashi-geri",
+        "slug": "mawashi-geri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mawari-yoko-geri",
+        "slug": "mawari-yoko-geri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ushiro-geri",
+        "slug": "ushiro-geri",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ura-mawashi-geri",
+        "slug": "ura-mawashi-geri",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hiza-geri",
+        "slug": "hiza-geri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Fumi-komi",
+        "slug": "fumi-komi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Otoshi-mawari-yoko-geri",
+        "slug": "otoshi-mawari-yoko-geri",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Mawashi-tobi-geri",
+        "slug": "mawashi-tobi-geri",
+        "primary": false,
+        "secondary": false,
+        "tertiary": true,
+        "description": ""
+      },
+      {
+        "name": "Ni-dan-geri",
+        "slug": "ni-dan-geri",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Strikes (Uchi)",
+    "slug": "strikes-uchi",
+    "techniques": [
+      {
+        "name": "Tate-empi",
+        "slug": "tate-empi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Teisho-uchi",
+        "slug": "teisho-uchi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kentsui-uchi",
+        "slug": "kentsui-uchi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Yoko-empi",
+        "slug": "yoko-empi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Uraken-uchi",
+        "slug": "uraken-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shuto-uchi",
+        "slug": "shuto-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Otoshi-empi",
+        "slug": "otoshi-empi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ryote-teisho-uchi",
+        "slug": "ryote-teisho-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ushiro-empi",
+        "slug": "ushiro-empi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mawashi-empi",
+        "slug": "mawashi-empi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Jodan-ushiro-empi",
+        "slug": "jodan-ushiro-empi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kakudo-otoshi-empi",
+        "slug": "kakudo-otoshi-empi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Koko-uchi",
+        "slug": "koko-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kakuto-uchi",
+        "slug": "kakuto-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hiraken-uchi",
+        "slug": "hiraken-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Forms/Routines (Kata)",
+    "slug": "forms-routines-kata",
+    "techniques": [
+      {
+        "name": "Kihon-dosa-ichi",
+        "slug": "kihon-dosa-ichi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kihon-dosa-ni",
+        "slug": "kihon-dosa-ni",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Zenshin-kotai",
+        "slug": "zenshin-kotai",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Seiken-no-migi-hidari",
+        "slug": "seiken-no-migi-hidari",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kihon-kata ichi",
+        "slug": "kihon-kata-ichi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kihon-dosa-san",
+        "slug": "kihon-dosa-san",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shi-ho-wari",
+        "slug": "shi-ho-wari",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kihon-kata-ni",
+        "slug": "kihon-kata-ni",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Seisan",
+        "slug": "seisan",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Niseishi",
+        "slug": "niseishi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shime-no-dosa",
+        "slug": "shime-no-dosa",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kihon-dosa-yon",
+        "slug": "kihon-dosa-yon",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Rohai-sho",
+        "slug": "rohai-sho",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Empi-kihon-dosa",
+        "slug": "empi-kihon-dosa",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kihon-kata-san",
+        "slug": "kihon-kata-san",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Bassai",
+        "slug": "bassai",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Chinto",
+        "slug": "chinto",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kusanku",
+        "slug": "kusanku",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sanshiryu",
+        "slug": "sanshiryu",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ryusan",
+        "slug": "ryusan",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sanchin",
+        "slug": "sanchin",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Concepts",
+    "slug": "concepts",
+    "techniques": [
+      {
+        "name": "Linear Translation",
+        "slug": "linear-translation",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "To-ma",
+        "slug": "to-ma",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tsukuri",
+        "slug": "tsukuri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ichi-gan/ni-soku/san-tan/shi-rikki/go-kyo",
+        "slug": "ichi-gan-ni-soku-san-tan-shi-rikki-go-kyo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sabaki",
+        "slug": "sabaki",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ma",
+        "slug": "ma",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kiai",
+        "slug": "kiai",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Chika-ma",
+        "slug": "chika-ma",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sen",
+        "slug": "sen",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hiki-ashi",
+        "slug": "hiki-ashi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hikite",
+        "slug": "hikite",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Rotational power",
+        "slug": "rotational-power",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hyoshi",
+        "slug": "hyoshi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Atemi",
+        "slug": "atemi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Go-no-sen",
+        "slug": "go-no-sen",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shibori",
+        "slug": "shibori",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shime",
+        "slug": "shime",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Nagashi",
+        "slug": "nagashi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Embusen",
+        "slug": "embusen",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Zanshin",
+        "slug": "zanshin",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Jutsu",
+        "slug": "jutsu",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kyo",
+        "slug": "kyo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kuzushi",
+        "slug": "kuzushi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Descending power",
+        "slug": "descending-power",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tokushu",
+        "slug": "tokushu",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Seichusen",
+        "slug": "seichusen",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kime",
+        "slug": "kime",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Metsuke",
+        "slug": "metsuke",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kokyu-ho",
+        "slug": "kokyu-ho",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kensei",
+        "slug": "kensei",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hari",
+        "slug": "hari",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tai-no-sen",
+        "slug": "tai-no-sen",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mokuso",
+        "slug": "mokuso",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shisei",
+        "slug": "shisei",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Vibrational power",
+        "slug": "vibrational-power",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Self-Defense (Goshin-jitsu)",
+    "slug": "self-defense-goshin-jitsu",
+    "techniques": [
+      {
+        "name": "Tai-sabaki (part 1)",
+        "slug": "tai-sabaki-part-1",
+        "primary": false,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Osoto-gari",
+        "slug": "osoto-gari",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kata-guruma",
+        "slug": "kata-guruma",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "O-uchi-gari",
+        "slug": "o-uchi-gari",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Fumi-komi",
+        "slug": "fumi-komi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hiza-geri",
+        "slug": "hiza-geri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sukui-uke",
+        "slug": "sukui-uke",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tai-sabaki (part 2)",
+        "slug": "tai-sabaki-part-2",
+        "primary": false,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Osoto-gari and ude-gatame",
+        "slug": "osoto-gari-and-ude-gatame",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kata-guruma and Ezekiel",
+        "slug": "kata-guruma-and-ezekiel",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "O-uchi-gari and knee bar",
+        "slug": "o-uchi-gari-and-knee-bar",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Fumi-komi and RNC",
+        "slug": "fumi-komi-and-rnc",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hiza-geri and guillotine",
+        "slug": "hiza-geri-and-guillotine",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sukui-uke and ankle lock",
+        "slug": "sukui-uke-and-ankle-lock",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kyusho",
+        "slug": "kyusho",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Unconventional striking surfaces",
+        "slug": "unconventional-striking-surfaces",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "SAFE Stance",
+        "slug": "safe-stance",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Clinches",
+        "slug": "clinches",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Take the back",
+        "slug": "take-the-back",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Arm drag",
+        "slug": "arm-drag",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Pensador defense",
+        "slug": "pensador-defense",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Goshin-Jitsu (Grab escapes)",
+    "slug": "goshin-jitsu-grab-escapes",
+    "techniques": [
+      {
+        "name": "Wrist grab escape (Basic)",
+        "slug": "wrist-grab-escape-basic",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shirt grab escape (push)",
+        "slug": "shirt-grab-escape-push",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Bear hug escape",
+        "slug": "bear-hug-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shirt grab escape (ude-gatame)",
+        "slug": "shirt-grab-escape-ude-gatame",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Te-hedoki-no-waza (part 1)",
+        "slug": "te-hedoki-no-waza-part-1",
+        "primary": false,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tate-empi escape",
+        "slug": "tate-empi-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Teisho-uchi escape",
+        "slug": "teisho-uchi-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ura-kote-mawashi escape",
+        "slug": "ura-kote-mawashi-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kote-mawashi escape",
+        "slug": "kote-mawashi-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ude-gatame high escape",
+        "slug": "ude-gatame-high-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ude-gatame low escape",
+        "slug": "ude-gatame-low-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Side collar grab escape (ude-garami)",
+        "slug": "side-collar-grab-escape-ude-garami",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Te-hedoki-no-waza (part 2)",
+        "slug": "te-hedoki-no-waza-part-2",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Irimi-nage escape",
+        "slug": "irimi-nage-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shi-ho-nage escape",
+        "slug": "shi-ho-nage-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ushiro-otoshi-nage escape",
+        "slug": "ushiro-otoshi-nage-escape",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kote-hineri-escape",
+        "slug": "kote-hineri-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kote-gaeshi escape",
+        "slug": "kote-gaeshi-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hanmi-handachi-kote-gaishi escape",
+        "slug": "hanmi-handachi-kote-gaishi-escape",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Headlock escape",
+        "slug": "headlock-escape",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Front hair pull escape",
+        "slug": "front-hair-pull-escape",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Rear hair pull escape",
+        "slug": "rear-hair-pull-escape",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Choke defense",
+        "slug": "choke-defense",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Goshin-Jitsu (Throws)",
+    "slug": "goshin-jitsu-throws",
+    "techniques": [
+      {
+        "name": "Irimi-nage",
+        "slug": "irimi-nage",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Shi-ho-nage",
+        "slug": "shi-ho-nage",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ushiro-otoshi-nage",
+        "slug": "ushiro-otoshi-nage",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hanmi-handachi-kote-gaeshi",
+        "slug": "hanmi-handachi-kote-gaeshi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Saru-te",
+        "slug": "saru-te",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tani-otoshi",
+        "slug": "tani-otoshi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ashi-barai",
+        "slug": "ashi-barai",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tai-otoshi",
+        "slug": "tai-otoshi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "O-soto-gari",
+        "slug": "o-soto-gari",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kata-gatame-nage",
+        "slug": "kata-gatame-nage",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "O-uchi-gari",
+        "slug": "o-uchi-gari",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ippon-ashi-gari",
+        "slug": "ippon-ashi-gari",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sasae-tsurikomi-ashi",
+        "slug": "sasae-tsurikomi-ashi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Morote-gari",
+        "slug": "morote-gari",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kata-atemi-nage",
+        "slug": "kata-atemi-nage",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Yoko-men-uchi-nage",
+        "slug": "yoko-men-uchi-nage",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mawari-kote-gaeshi",
+        "slug": "mawari-kote-gaeshi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Morote-gari (alternate)",
+        "slug": "morote-gari-alternate",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kaiten-otoshi-nage",
+        "slug": "kaiten-otoshi-nage",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kaiten-hiji-nage",
+        "slug": "kaiten-hiji-nage",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "O-goshi",
+        "slug": "o-goshi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Koshi-guruma",
+        "slug": "koshi-guruma",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Harai-goshi",
+        "slug": "harai-goshi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sukui-nage",
+        "slug": "sukui-nage",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ko-uchi-gari",
+        "slug": "ko-uchi-gari",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Seoi-nage",
+        "slug": "seoi-nage",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Uki-waza",
+        "slug": "uki-waza",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Uchi-mata",
+        "slug": "uchi-mata",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Goshin-Jitsu (Joint attacks/strangles)",
+    "slug": "goshin-jitsu-joint-attacks-strangles",
+    "techniques": [
+      {
+        "name": "Ude-gatame",
+        "slug": "ude-gatame",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kote-mawashi",
+        "slug": "kote-mawashi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ura-kote-mawashi",
+        "slug": "ura-kote-mawashi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kote-hineri",
+        "slug": "kote-hineri",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kote-gaeshi",
+        "slug": "kote-gaeshi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ushiro-hadaka-jime",
+        "slug": "ushiro-hadaka-jime",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mae-hadaka-jime",
+        "slug": "mae-hadaka-jime",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ushiro-ura-kote-mawashi",
+        "slug": "ushiro-ura-kote-mawashi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Small joint manipulation",
+        "slug": "small-joint-manipulation",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Falls/Rolls (Ukemi)",
+    "slug": "falls-rolls-ukemi",
+    "techniques": [
+      {
+        "name": "Technical get-up",
+        "slug": "technical-get-up",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Pop-ups",
+        "slug": "pop-ups",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ushiro-ukemi",
+        "slug": "ushiro-ukemi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Yoko-ukemi",
+        "slug": "yoko-ukemi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ukemi (Fall/Rolls)",
+        "slug": "ukemi-fall-rolls",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Zenpo-kaiten",
+        "slug": "zenpo-kaiten",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Koho-kaiten",
+        "slug": "koho-kaiten",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mae-ukemi-ichi",
+        "slug": "mae-ukemi-ichi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mae-ukemi-ni",
+        "slug": "mae-ukemi-ni",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tokushu-zenpo-kaiten",
+        "slug": "tokushu-zenpo-kaiten",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tokushu-ushiro-ukemi",
+        "slug": "tokushu-ushiro-ukemi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Grappling",
+    "slug": "grappling",
+    "techniques": [
+      {
+        "name": "Grappling positions",
+        "slug": "grappling-positions",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "4 Layer defense",
+        "slug": "4-layer-defense",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Smash Pass",
+        "slug": "smash-pass",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Single Knee Push Pass",
+        "slug": "single-knee-push-pass",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Knee Slice Pass",
+        "slug": "knee-slice-pass",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Grappling escapes",
+        "slug": "grappling-escapes",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ushiro-hadaka-jime (RNC)",
+        "slug": "ushiro-hadaka-jime-rnc",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mae-hadaka-jime (Guillotine)",
+        "slug": "mae-hadaka-jime-guillotine",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sankaku-jime",
+        "slug": "sankaku-jime",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Okuri-eri-jime",
+        "slug": "okuri-eri-jime",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ude-garami (Americana)",
+        "slug": "ude-garami-americana",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ude-garami (Kimura)",
+        "slug": "ude-garami-kimura",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ashi-gatame",
+        "slug": "ashi-gatame",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ashi-hishigi",
+        "slug": "ashi-hishigi",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sode-guruma-jime",
+        "slug": "sode-guruma-jime",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Grappling Sweeps",
+        "slug": "grappling-sweeps",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Weapons (Kobudo)",
+    "slug": "weapons-kobudo",
+    "techniques": [
+      {
+        "name": "Kobudo kata/kihon interpretation",
+        "slug": "kobudo-kata-kihon-interpretation",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Yoko-uchi",
+        "slug": "yoko-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mochikae-uchi",
+        "slug": "mochikae-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Seigan-no-kamae",
+        "slug": "seigan-no-kamae",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Nagashi-uke (bo)",
+        "slug": "nagashi-uke-bo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Koshi-kamae",
+        "slug": "koshi-kamae",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tsuno-kamae (bo)",
+        "slug": "tsuno-kamae-bo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Ura-zuki (bo)",
+        "slug": "ura-zuki-bo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Sharin",
+        "slug": "sharin",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Furiage-uchi",
+        "slug": "furiage-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Mawashi-uchi",
+        "slug": "mawashi-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Hante-mochi",
+        "slug": "hante-mochi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Gyaku-te-mochi",
+        "slug": "gyaku-te-mochi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Makkou-uchi",
+        "slug": "makkou-uchi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tsuki",
+        "slug": "tsuki",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kiri-kaeshi",
+        "slug": "kiri-kaeshi",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Jodan-uke (bo)",
+        "slug": "jodan-uke-bo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Soto-uke",
+        "slug": "soto-uke",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Uchi-uke (bo)",
+        "slug": "uchi-uke-bo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Gedan-uke (bo)",
+        "slug": "gedan-uke-bo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Tate-uke (bo)",
+        "slug": "tate-uke-bo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Kihon-bo-dosa",
+        "slug": "kihon-bo-dosa",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Goshin-jitsu (bo/hanbo)",
+        "slug": "goshin-jitsu-bo-hanbo",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Gun disarm",
+        "slug": "gun-disarm",
+        "primary": false,
+        "secondary": true,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Inside knife disarm",
+        "slug": "inside-knife-disarm",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Outside knife disarm",
+        "slug": "outside-knife-disarm",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      },
+      {
+        "name": "Stick/club disarm",
+        "slug": "stick-club-disarm",
+        "primary": true,
+        "secondary": false,
+        "tertiary": false,
+        "description": ""
+      }
+    ]
+  }
+]

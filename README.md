@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🥋 Karate Techniques App
 
-## Getting Started
+A modern, lightweight web application for exploring and learning karate techniques. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **14 Categories** of karate techniques (Stances, Blocks, Punches, Kicks, etc.)
+- **265+ Techniques** with detailed organization
+- **Modern UI** with dark/light theme support
+- **Fast Loading** optimized for performance
+- **Responsive Design** works on all devices
+
+## 🚀 Tech Stack
+
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type safety and better development experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vercel** - Deployment platform (recommended)
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── category/[slug]/      # Dynamic category pages
+│   ├── technique/[slug]/     # Dynamic technique pages
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Home page
+├── data/
+│   └── techniques.json      # All technique data
+├── types/
+│   └── technique.ts         # TypeScript definitions
+└── lib/
+    └── utils.ts            # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Current Status
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ **Phase 1 Complete** - Basic Framework
+- Project structure set up
+- CSV data converted to JSON
+- Home page with category grid
+- Dynamic category pages
+- Dynamic technique detail pages
+- Responsive design
+- Performance optimized
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📋 **Next Steps**
+- [ ] Add search functionality
+- [ ] Implement image/video uploads
+- [ ] Add technique descriptions
+- [ ] User authentication
+- [ ] Favorites/bookmarks
+- [ ] Progress tracking
+- [ ] Mobile app version
 
-## Learn More
+## 🚦 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Run development server:**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Open browser:**
+   Navigate to http://localhost:3000
 
-## Deploy on Vercel
+## 📊 Data Source
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Technique data is sourced from `Secret Project - Sheet1.csv` with:
+- 14 categories
+- 265+ techniques
+- Primary/Secondary/Tertiary classification
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Customization
+
+- Update `src/data/techniques.json` to modify technique data
+- Add images to `public/images/` directory
+- Customize styles in Tailwind configuration
+- Modify components in `src/app/`
+
+## 📱 Performance
+
+- Static generation for fast loading
+- Image optimization with Next.js
+- Code splitting for optimal bundles
+- Minimal JavaScript runtime
+
+## 🔧 Development
+
+To add new techniques, update the CSV file and run:
+```bash
+node scripts/convert-csv-to-json.js
+```
+
+---
+
+Built with ❤️ for karate practitioners and martial arts enthusiasts.

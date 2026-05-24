@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Shiko-ashi-dachi: Horse stance - wide, knees bent -->
+  <g fill="#1f2937">
+    <!-- Head -->
+    <circle cx="60" cy="20" r="8"/>
+    <!-- Body lower -->
+    <rect x="56" y="28" width="8" height="28" rx="2"/>
+    <!-- Arms on hips -->
+    <rect x="45" y="30" width="11" height="6" rx="2" transform="rotate(-20 50 33)"/>
+    <rect x="64" y="30" width="11" height="6" rx="2" transform="rotate(20 70 33)"/>
+    <!-- Wide legs bent outward -->
+    <rect x="36" y="56" width="7" height="25" rx="2" transform="rotate(-15 39 68)"/>
+    <rect x="34" y="78" width="7" height="25" rx="2" transform="rotate(-10 37 90)"/>
+    <rect x="77" y="56" width="7" height="25" rx="2" transform="rotate(15 81 68)"/>
+    <rect x="79" y="78" width="7" height="25" rx="2" transform="rotate(10 83 90)"/>
+    <!-- Feet wide apart -->
+    <ellipse cx="30" cy="105" rx="8" ry="4" transform="rotate(-20 30 105)"/>
+    <ellipse cx="90" cy="105" rx="8" ry="4" transform="rotate(20 90 105)"/>
+  </g>
+</svg>
