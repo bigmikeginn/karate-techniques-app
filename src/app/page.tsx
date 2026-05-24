@@ -324,7 +324,7 @@ export default function Home() {
           {filteredTechniques.length > 0 ? (
             <div
               key={`${activeDiscipline}-${selectedCategoryKey}`}
-              className="grid items-start grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3"
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3"
             >
               {filteredTechniques.map((technique, index) => {
                 const colors = getCategoryColor(technique.categorySlug);
@@ -338,7 +338,7 @@ export default function Home() {
                     className={`
                       bg-[#111111] rounded border-2 
                       ${colors.border} ${colors.hover}
-                      premium-card animate-soft-enter relative transition-all duration-300 ease-out p-2.5 sm:p-3 
+                      premium-card animate-soft-enter relative h-32 sm:h-36 transition-all duration-300 ease-out p-2.5 sm:p-3 
                       cursor-pointer group
                       hover:-translate-y-1 hover:scale-[1.015] hover:shadow-xl hover:shadow-red-950/25
                       active:translate-y-0 active:scale-[0.99]
@@ -348,13 +348,13 @@ export default function Home() {
                     {activeDiscipline === 'karate' && (
                       <TechniqueIcon technique={technique} />
                     )}
-                    <div className="flex min-h-[5.4rem] flex-col justify-between gap-2">
+                    <div className="flex h-full flex-col justify-between gap-2">
                       <div className="space-y-1">
-                        <h2 className="pr-11 font-semibold text-sm text-white leading-tight">
+                        <h2 className="pr-11 font-semibold text-sm text-white leading-tight line-clamp-2">
                           {technique.name}
                         </h2>
                         {subtitle && (
-                          <p className={`pr-9 text-xs mt-0.5 leading-tight italic ${colors.text}`}>
+                          <p className={`pr-9 text-xs mt-0.5 leading-tight italic line-clamp-2 ${colors.text}`}>
                             {subtitle}
                           </p>
                         )}
