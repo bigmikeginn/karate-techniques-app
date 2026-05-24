@@ -15,42 +15,6 @@ type DisplayTechnique = Technique & {
 };
 
 const disciplineIds = Object.keys(disciplines) as Discipline[];
-const availableTechniqueIcons = new Set([
-  'hanten',
-  'kosa-dachi',
-  'musubi-dachi',
-  'sasoi-kamae',
-  'seisan-dachi',
-  'seiza',
-  'shiko-ashi-dachi',
-  'soto-kaiten-dachi',
-  'suri-ashi',
-  'uchi-hachiji-dachi',
-]);
-
-function TechniqueIcon({
-  technique,
-}: {
-  technique: DisplayTechnique;
-}) {
-  if (!availableTechniqueIcons.has(technique.slug)) return null;
-
-  const exactIconPath = `/images/techniques/${technique.slug}.svg`;
-
-  return (
-    <div className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center">
-      <Image
-        src={exactIconPath}
-        alt=""
-        width={32}
-        height={32}
-        unoptimized
-        className="h-7 w-7 object-contain opacity-80 invert transition-opacity duration-200 group-hover:opacity-100"
-      />
-    </div>
-  );
-}
-
 function getKarateSubtitle(technique: DisplayTechnique) {
   const exactSubtitle = getEnglishName(technique.name);
   if (exactSubtitle) return exactSubtitle;
@@ -345,16 +309,13 @@ export default function Home() {
                     `}
                     style={{ animationDelay: `${Math.min(index, 20) * 18}ms` }}
                   >
-                    {activeDiscipline === 'karate' && (
-                      <TechniqueIcon technique={technique} />
-                    )}
                     <div className="flex h-full flex-col justify-between gap-2">
                       <div className="space-y-1">
-                        <h2 className="pr-11 font-semibold text-sm text-white leading-tight line-clamp-2">
+                        <h2 className="font-semibold text-sm text-white leading-tight line-clamp-2">
                           {technique.name}
                         </h2>
                         {subtitle && (
-                          <p className={`pr-9 text-xs mt-0.5 leading-tight italic line-clamp-2 ${colors.text}`}>
+                          <p className={`text-xs mt-0.5 leading-tight italic line-clamp-2 ${colors.text}`}>
                             {subtitle}
                           </p>
                         )}
