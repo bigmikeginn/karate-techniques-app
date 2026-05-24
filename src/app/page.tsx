@@ -6,7 +6,7 @@ import { Category, Discipline, Technique } from '@/types/technique';
 import { disciplines } from '@/data/disciplines';
 import { getDescription } from '@/data/technique_descriptions';
 import { getCategoryColor } from '@/lib/categoryColors';
-import { getEnglishName, isJapaneseName } from '@/data/technique_translations';
+import { getEnglishName } from '@/data/technique_translations';
 
 type DisplayTechnique = Technique & {
   category: string;
@@ -49,6 +49,30 @@ function TechniqueIcon({
       />
     </div>
   );
+}
+
+function getKarateSubtitle(technique: DisplayTechnique) {
+  const exactSubtitle = getEnglishName(technique.name);
+  if (exactSubtitle) return exactSubtitle;
+
+  const categorySubtitles: Record<string, string> = {
+    'stances-dachi': 'Stance / Guard',
+    'blocks-uke': 'Block',
+    'punches-zuki': 'Punch',
+    'kicks-geri': 'Kick',
+    'strikes-uchi': 'Strike',
+    'forms-routines-kata': 'Form / Routine',
+    'concepts': 'Training Concept',
+    'self-defense-goshin-jitsu': 'Self-Defense',
+    'goshin-jitsu-grab-escapes': 'Grab Escape',
+    'goshin-jitsu-throws': 'Throw',
+    'goshin-jitsu-joint-attacks-strangles': 'Joint Attack / Strangle',
+    'falls-rolls-ukemi': 'Fall / Roll',
+    'grappling': 'Grappling',
+    'weapons-kobudo': 'Weapons',
+  };
+
+  return categorySubtitles[technique.categorySlug] || 'Karate Technique';
 }
 
 function DisciplineToggle({
@@ -300,10 +324,13 @@ export default function Home() {
           {filteredTechniques.length > 0 ? (
             <div
               key={`${activeDiscipline}-${selectedCategoryKey}`}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3"
+              className="grid items-start grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3"
             >
               {filteredTechniques.map((technique, index) => {
                 const colors = getCategoryColor(technique.categorySlug);
+                const subtitle = activeDiscipline === 'karate'
+                  ? getKarateSubtitle(technique)
+                  : null;
                 return (
                   <div
                     key={technique.uniqueKey}
@@ -321,17 +348,17 @@ export default function Home() {
                     {activeDiscipline === 'karate' && (
                       <TechniqueIcon technique={technique} />
                     )}
-                    <div className="space-y-1.5">
-                      <div>
+                    <div className="flex min-h-[5.4rem] flex-col justify-between gap-2">
+                      <div className="space-y-1">
                         <h2 className="pr-11 font-semibold text-sm text-white leading-tight">
                           {technique.name}
                         </h2>
-                        {activeDiscipline === 'karate' && isJapaneseName(technique.name) && (
+                        {subtitle && (
                           <p className={`pr-9 text-xs mt-0.5 leading-tight italic ${colors.text}`}>
-                            {getEnglishName(technique.name) || ''}
+                            {subtitle}
                           </p>
                         )}
-                        {(activeDiscipline !== 'karate' || !isJapaneseName(technique.name)) && (
+                        {!subtitle && (
                           <div className="h-4"></div>
                         )}
                       </div>
