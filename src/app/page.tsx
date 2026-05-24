@@ -35,6 +35,7 @@ function TechniqueTierMarker({
       <span
         className={`absolute right-2 top-1.5 text-sm leading-none ${colorClass}`}
         title="Tertiary technique"
+        role="img"
         aria-label="Tertiary technique"
       >
         *
@@ -46,6 +47,7 @@ function TechniqueTierMarker({
     <span
       className={`absolute right-2.5 top-2.5 h-2 w-2 rounded-full bg-current ${colorClass}`}
       title="Secondary technique"
+      role="img"
       aria-label="Secondary technique"
     />
   );
@@ -167,7 +169,7 @@ export default function Home() {
               <h1 className="text-lg sm:text-2xl font-semibold tracking-tight">
                 {discipline.title}
               </h1>
-              <p className="text-[10px] sm:text-xs tracking-[0.22em] sm:tracking-[0.25em] uppercase text-white/40">
+              <p className="text-[10px] sm:text-xs tracking-[0.22em] sm:tracking-[0.25em] uppercase text-white/55">
                 {discipline.label} Techniques Library
               </p>
             </div>
@@ -188,7 +190,7 @@ export default function Home() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2.5 sm:py-2 text-sm bg-black border border-white/20 rounded focus:ring-1 focus:ring-red-600 focus:border-red-600 text-white placeholder-white/40"
             />
-            <p className="text-xs text-white/40 mt-1 tracking-wide">
+            <p className="text-xs text-white/55 mt-1 tracking-wide">
               {filteredTechniques.length} techniques shown
             </p>
           </div>
@@ -330,9 +332,9 @@ export default function Home() {
                     )}
                     <div className="space-y-1.5">
                       <div>
-                        <h3 className="pr-4 font-semibold text-sm text-white leading-tight">
+                        <h2 className="pr-4 font-semibold text-sm text-white leading-tight">
                           {technique.name}
-                        </h3>
+                        </h2>
                         {activeDiscipline === 'karate' && isJapaneseName(technique.name) && (
                           <p className={`text-xs mt-0.5 leading-tight italic ${colors.text}`}>
                             {getEnglishName(technique.name) || ''}
@@ -343,7 +345,7 @@ export default function Home() {
                         )}
                       </div>
                       
-                      <p className="text-xs text-white/40 leading-tight line-clamp-2">
+                      <p className="text-xs text-white/55 leading-tight line-clamp-2">
                         {technique.description}
                       </p>
                     </div>
