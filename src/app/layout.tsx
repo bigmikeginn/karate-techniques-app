@@ -13,8 +13,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Martial Arts Techniques Library",
-  description: "A student resource for Karate and Brazilian Jiu-Jitsu techniques.",
+  title: "Jitsu-Do Techniques Library",
+  description: "Explore and learn Karate and Brazilian Jiu-Jitsu techniques with the Jitsu-Do Academy.",
+  openGraph: {
+    title: "Jitsu-Do Techniques Library",
+    description: "Student resource for Karate and BJJ techniques",
+    url: "https://app.jitsudo.ca",
+    siteName: "Jitsu-Do Academy",
+    images: [
+      {
+        url: "/jitsudo-og.svg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jitsu-Do Techniques Library",
+    description: "Student resource for Karate and BJJ techniques",
+    images: ["/jitsudo-og.svg"],
+  },
 };
 
 export default function RootLayout({
