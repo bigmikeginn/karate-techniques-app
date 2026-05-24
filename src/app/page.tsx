@@ -143,7 +143,7 @@ export default function Home() {
   const selectedCategoryKey = Array.from(selectedCategories).sort().join('|') || 'all';
 
   return (
-    <div className="relative flex h-dvh min-h-screen flex-col bg-black text-white">
+    <div className="flex min-h-screen flex-col bg-black text-white">
       {/* Header - Jitsu-Do Style */}
       <header className="bg-[#111111] border-b border-white/10 sticky top-0 z-20">
         <div className="px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 grid grid-cols-1 gap-2.5 sm:gap-3 lg:grid-cols-[minmax(340px,1fr)_minmax(260px,360px)_minmax(340px,1fr)] lg:items-center">
@@ -300,7 +300,7 @@ export default function Home() {
         )}
 
         {/* Main Content - Jitsu-Do Style */}
-        <main className="min-w-0 flex-1 overflow-auto p-3 sm:p-6 pb-12">
+        <main className="min-w-0 flex-1 overflow-auto p-3 sm:p-6">
           {filteredTechniques.length > 0 ? (
             <div
               key={`${activeDiscipline}-${selectedCategoryKey}`}
@@ -449,7 +449,7 @@ export default function Home() {
       )}
 
       {/* Footer */}
-      <footer className="absolute bottom-0 left-0 right-0 py-3 text-center text-xs text-white/30 bg-black/50 backdrop-blur-sm border-t border-white/10">
+      <footer className="py-3 text-center text-xs text-white/30 bg-black/50 backdrop-blur-sm border-t border-white/10">
         Part of <a 
           href="https://jitsudo.ca" 
           target="_blank" 
