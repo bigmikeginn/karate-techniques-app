@@ -103,7 +103,7 @@ body {
 
 .premium-card {
   transform: translateZ(0);
-  will-change: transform, box-shadow, border-color;
+  contain: layout paint;
 }
 
 .premium-card::after {
@@ -119,6 +119,13 @@ body {
 
 .premium-card:hover::after {
   opacity: 1;
+}
+
+@supports (content-visibility: auto) {
+  .premium-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 9rem 12rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

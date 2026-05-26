@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Category, Discipline, Technique } from '@/types/technique';
 import { disciplines } from '@/data/disciplines';
@@ -98,6 +98,19 @@ export default function Home() {
   const discipline = disciplines[activeDiscipline];
   const categories: Category[] = discipline.categories;
 
+  useEffect(() => {
+    if (!selectedTechnique) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedTechnique(null);
+      }
+    };
+
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [selectedTechnique]);
+
   const switchDiscipline = (nextDiscipline: Discipline) => {
     if (nextDiscipline === activeDiscipline) return;
     setActiveDiscipline(nextDiscipline);
@@ -188,6 +201,7 @@ export default function Home() {
             </div>
             <input
               type="text"
+              aria-label={`Search ${discipline.label} techniques`}
               placeholder={`Search ${discipline.label} techniques...`}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -313,10 +327,12 @@ export default function Home() {
                   ? getKarateSubtitle(technique)
                   : getBjjSubtitle(technique);
                 return (
-                  <div
+                  <button
+                    type="button"
                     key={technique.uniqueKey}
                     onClick={() => setSelectedTechnique(technique)}
                     className={`
+                      text-left
                       bg-[#111111] rounded border-2 
                       ${colors.border} ${colors.hover}
                       premium-card animate-soft-enter relative h-32 sm:h-36 transition-all duration-300 ease-out p-2.5 sm:p-3 
@@ -345,7 +361,7 @@ export default function Home() {
                         {technique.description}
                       </p>
                     </div>
-                  </div>
+                  </button>
                 );
               })}
             </div>
@@ -373,11 +389,17 @@ export default function Home() {
       {/* Modal for Technique Details - Jitsu-Do Style */}
       {selectedTechnique && (
         <div className="animate-modal-overlay fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-2 sm:p-6" onClick={() => setSelectedTechnique(null)}>
-          <div className="animate-modal-panel bg-[#111111] rounded-lg border border-white/20 max-w-3xl w-full max-h-[94dvh] sm:max-h-[90vh] overflow-auto shadow-2xl shadow-black/60" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="animate-modal-panel bg-[#111111] rounded-lg border border-white/20 max-w-3xl w-full max-h-[94dvh] sm:max-h-[90vh] overflow-auto shadow-2xl shadow-black/60"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="technique-detail-title"
+          >
             <div className="sticky top-0 bg-[#111111] border-b border-white/10 p-4 sm:p-6">
               <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-2">Technique Details</p>
               <div className="flex items-center justify-between gap-4">
-                <h2 className="min-w-0 flex-1 text-lg sm:text-2xl font-semibold tracking-tight text-white">
+                <h2 id="technique-detail-title" className="min-w-0 flex-1 text-lg sm:text-2xl font-semibold tracking-tight text-white">
                   {selectedTechnique.name}
                 </h2>
                 <div className="flex shrink-0 items-center gap-2">
@@ -387,6 +409,7 @@ export default function Home() {
                   <button
                     onClick={() => setSelectedTechnique(null)}
                     className="text-white/55 hover:text-white border border-white/20 hover:border-white/60 w-10 h-10 flex items-center justify-center rounded transition-colors"
+                    aria-label="Close technique details"
                   >
                     <span className="text-2xl leading-none">×</span>
                   </button>
@@ -410,7 +433,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                   <p className="text-sm text-white/50 font-mono tracking-wider uppercase">Photo Coming Soon</p>
-                  <p className="text-xs text-white/30 mt-2 font-mono">
+                  <p className="break-all text-xs text-white/40 mt-2 font-mono">
                     /public/images/techniques/{selectedTechnique.slug}.jpg
                   </p>
                 </div>

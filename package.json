@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:browser": "node scripts/browser-smoke.js",
     "update-data": "node scripts/update-data.js"
   },
   "dependencies": {

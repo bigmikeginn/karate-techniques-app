@@ -14,8 +14,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://app.jitsudo.ca"),
+  applicationName: "Jitsu-Do Techniques Library",
   title: "Jitsu-Do Techniques Library",
   description: "Explore and learn Karate and Brazilian Jiu-Jitsu techniques with the Jitsu-Do Academy.",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  category: "education",
   openGraph: {
     title: "Jitsu-Do Techniques Library",
     description: "Student resource for Karate and BJJ techniques",
@@ -23,9 +32,10 @@ export const metadata: Metadata = {
     siteName: "Jitsu-Do Academy",
     images: [
       {
-        url: "/jitsudo-og.svg",
+        url: "/jitsudo-og.jpg",
         width: 1200,
         height: 630,
+        alt: "Jitsu-Do Techniques Library",
       },
     ],
     locale: "en_CA",
@@ -35,7 +45,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jitsu-Do Techniques Library",
     description: "Student resource for Karate and BJJ techniques",
-    images: ["/jitsudo-og.svg"],
+    images: ["/jitsudo-og.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/karate-logo.png",
   },
 };
 
