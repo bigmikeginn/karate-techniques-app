@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://app.jitsudo.ca"),
   title: "Jitsu-Do Techniques Library",
   description: "Explore and learn Karate and Brazilian Jiu-Jitsu techniques with the Jitsu-Do Academy.",
   openGraph: {

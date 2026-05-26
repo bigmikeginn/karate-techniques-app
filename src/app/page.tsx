@@ -1,3 +1,126 @@
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import { Category, Discipline, Technique } from '@/types/technique';
+import { disciplines } from '@/data/disciplines';
+import { getDescription } from '@/data/technique_descriptions';
+import { getCategoryColor } from '@/lib/categoryColors';
+import { getEnglishName } from '@/data/technique_translations';
+import Footer from '@/components/footer';
+
+type DisplayTechnique = Technique & {
+  category: string;
+  categorySlug: string;
+  uniqueKey: string;
+};
+
+const disciplineIds = Object.keys(disciplines) as Discipline[];
+function getKarateSubtitle(technique: DisplayTechnique) {
+  const exactSubtitle = getEnglishName(technique.name);
+  if (exactSubtitle) return exactSubtitle;
+
+  const categorySubtitles: Record<string, string> = {
+    'stances-dachi': 'Stance / Guard',
+    'blocks-uke': 'Block',
+    'punches-zuki': 'Punch',
+    'kicks-geri': 'Kick',
+    'strikes-uchi': 'Strike',
+    'forms-routines-kata': 'Form / Routine',
+    'concepts': 'Training Concept',
+    'self-defense-goshin-jitsu': 'Self-Defense',
+    'goshin-jitsu-grab-escapes': 'Grab Escape',
+    'goshin-jitsu-throws': 'Throw',
+    'goshin-jitsu-joint-attacks-strangles': 'Joint Attack / Strangle',
+    'falls-rolls-ukemi': 'Fall / Roll',
+    'grappling': 'Grappling',
+    'weapons-kobudo': 'Weapons',
+  };
+
+  return categorySubtitles[technique.categorySlug] || 'Karate Technique';
+}
+
+function getBjjSubtitle(technique: DisplayTechnique) {
+  const categorySubtitles: Record<string, string> = {
+    'bjj-positions': 'Position',
+    'bjj-movement-fundamentals': 'Movement',
+    'bjj-escapes': 'Escape',
+    'bjj-guards': 'Guard',
+    'bjj-sweeps': 'Sweep',
+    'bjj-guard-passing': 'Pass',
+    'bjj-submissions': 'Submission',
+    'bjj-takedowns': 'Takedown',
+    'bjj-transitions-control': 'Transition / Control',
+  };
+
+  return categorySubtitles[technique.categorySlug] || 'BJJ Technique';
+}
+
+function DisciplineToggle({
+  activeDiscipline,
+  compact = false,
+  onChange,
+}: {
+  activeDiscipline: Discipline;
+  compact?: boolean;
+  onChange: (discipline: Discipline) => void;
+}) {
+  return (
+    <div className={`inline-grid grid-cols-2 rounded border border-white/20 bg-black p-1 ${compact ? 'w-full' : 'min-w-52'}`}>
+      {disciplineIds.map((id) => {
+        const isActive = activeDiscipline === id;
+        return (
+          <button
+            key={id}
+            type="button"
+            onClick={() => onChange(id)}
+            className={`rounded-sm px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-colors ${
+              isActive
+                ? 'bg-red-600 text-white'
+                : 'text-white/55 hover:bg-white/5 hover:text-white'
+            }`}
+            aria-pressed={isActive}
+          >
+            {disciplines[id].shortLabel}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function Home() {
+  const [activeDiscipline, setActiveDiscipline] = useState<Discipline>('karate');
+  const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set());
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [selectedTechnique, setSelectedTechnique] = useState<DisplayTechnique | null>(null);
+  const discipline = disciplines[activeDiscipline];
+  const categories: Category[] = discipline.categories;
+
+  const switchDiscipline = (nextDiscipline: Discipline) => {
+    if (nextDiscipline === activeDiscipline) return;
+    setActiveDiscipline(nextDiscipline);
+    setSelectedCategories(new Set());
+    setSearchTerm('');
+    setSelectedTechnique(null);
+    setSidebarOpen(false);
+  };
+
+  const toggleCategory = (slug: string) => {
+    const newSelected = new Set(selectedCategories);
+    if (newSelected.has(slug)) {
+      newSelected.delete(slug);
+    } else {
+      newSelected.add(slug);
+    }
+    setSelectedCategories(newSelected);
+  };
+
+  const selectAllCategories = () => {
+    setSelectedCategories(new Set(categories.map(cat => cat.slug)));
+  };
+
   const clearAllCategories = () => {
     setSelectedCategories(new Set());
   };
@@ -21,7 +144,7 @@
   const selectedCategoryKey = Array.from(selectedCategories).sort().join('|') || 'all';
 
   return (
-    <div className="flex min-h-screen flex-col bg-black text-white">
+    <div className="relative flex h-dvh min-h-screen flex-col bg-black text-white">
       {/* Header - Jitsu-Do Style */}
       <header className="bg-[#111111] border-b border-white/10 sticky top-0 z-20">
         <div className="px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 grid grid-cols-1 gap-2.5 sm:gap-3 lg:grid-cols-[minmax(340px,1fr)_minmax(260px,360px)_minmax(340px,1fr)] lg:items-center">
@@ -74,7 +197,7 @@
         </div>
       </header>
 
-      <div className="flex flex-1 overflow-auto">
+      <div className="relative flex flex-1 min-h-0 overflow-hidden">
         {/* Sidebar - Jitsu-Do Dark Theme */}
         <aside className={`
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
@@ -124,7 +247,7 @@
                     flex items-center space-x-2.5 py-1.5 px-2 rounded cursor-pointer
                     border transition-all duration-300 ease-out
                     hover:translate-x-1 hover:border-white/15 hover:bg-white/[0.03]
-                    ${isSelected ? \`category-selected bg-white/[0.07] border-white/20 \${colors.text}\` : 'border-transparent'}
+                    ${isSelected ? `category-selected bg-white/[0.07] border-white/20 ${colors.text}` : 'border-transparent'}
                   `}>
                     <input
                       type="checkbox"
@@ -133,15 +256,15 @@
                       className="h-3.5 w-3.5 accent-red-600 border-white/30 rounded bg-black/50"
                     />
                     <div className="flex-1 min-w-0">
-                      <span className={\`font-medium block \${isSelected ? colors.text : 'text-white/70'}\`}>
+                      <span className={`font-medium block ${isSelected ? colors.text : 'text-white/70'}`}>
                         {category.name}
                       </span>
                     </div>
-                    <span className={\`rounded border px-1.5 py-0.5 text-[10px] font-mono tracking-wider uppercase transition-colors \${
+                    <span className={`rounded border px-1.5 py-0.5 text-[10px] font-mono leading-none transition-colors ${
                       isSelected
-                        ? \`\${colors.border} \${colors.text} bg-white/5\`
+                        ? `${colors.border} ${colors.text} bg-white/5`
                         : 'border-white/10 text-white/35'
-                    }\`}>
+                    }`}>
                       {techniqueCount}
                     </span>
                   </label>
@@ -178,10 +301,10 @@
         )}
 
         {/* Main Content - Jitsu-Do Style */}
-        <main className="min-w-0 flex-1 overflow-auto p-3 sm:p-6">
+        <main className="min-w-0 flex-1 overflow-auto p-3 sm:p-6 pb-12">
           {filteredTechniques.length > 0 ? (
             <div
-              key={\`${activeDiscipline}-\${selectedCategoryKey}\`}
+              key={`${activeDiscipline}-${selectedCategoryKey}`}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3"
             >
               {filteredTechniques.map((technique, index) => {
@@ -193,15 +316,15 @@
                   <div
                     key={technique.uniqueKey}
                     onClick={() => setSelectedTechnique(technique)}
-                    className={\`
+                    className={`
                       bg-[#111111] rounded border-2 
-                      \${colors.border} \${colors.hover}
+                      ${colors.border} ${colors.hover}
                       premium-card animate-soft-enter relative h-32 sm:h-36 transition-all duration-300 ease-out p-2.5 sm:p-3 
                       cursor-pointer group
                       hover:-translate-y-1 hover:scale-[1.015] hover:shadow-xl hover:shadow-red-950/25
                       active:translate-y-0 active:scale-[0.99]
-                    \`}
-                    style={{ animationDelay: \`\${Math.min(index, 20) * 18}ms\` }}
+                    `}
+                    style={{ animationDelay: `${Math.min(index, 20) * 18}ms` }}
                   >
                     <div className="flex h-full flex-col justify-between gap-2">
                       <div className="space-y-1">
@@ -209,7 +332,7 @@
                           {technique.name}
                         </h2>
                         {subtitle && (
-                          <p className={\`text-xs mt-0.5 leading-tight italic line-clamp-2 \${colors.text}\`}>
+                          <p className={`text-xs mt-0.5 leading-tight italic line-clamp-2 ${colors.text}`}>
                             {subtitle}
                           </p>
                         )}
@@ -258,7 +381,7 @@
                   {selectedTechnique.name}
                 </h2>
                 <div className="flex shrink-0 items-center gap-2">
-                  <span className={\`max-w-36 truncate px-2 py-1 rounded text-[10px] font-mono tracking-wider uppercase \${getCategoryColor(selectedTechnique.categorySlug).bg} \${getCategoryColor(selectedTechnique.categorySlug).text} border \${getCategoryColor(selectedTechnique.categorySlug).border}\`}>
+                  <span className={`max-w-36 truncate px-2 py-1 rounded text-[10px] font-mono tracking-wider uppercase ${getCategoryColor(selectedTechnique.categorySlug).bg} ${getCategoryColor(selectedTechnique.categorySlug).text} border ${getCategoryColor(selectedTechnique.categorySlug).border}`}>
                     {selectedTechnique.category}
                   </span>
                   <button
@@ -326,17 +449,7 @@
         </div>
       )}
 
-      {/* Footer */}
-      <footer className="py-3 text-center text-xs text-white/30 bg-black/50 border-t border-white/10">
-        Part of <a 
-          href="https://jitsudo.ca" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="underline hover:text-white/50 transition"
-        >
-          Jitsu-Do Academy
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }
